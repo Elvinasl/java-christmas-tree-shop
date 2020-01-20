@@ -16,8 +16,8 @@ public class Plastic extends ChristmasTree implements IChristmasTree, Product {
     }
 
     @Override
-    public Light getLight() {
-        return super.light;
+    public String getLightMessage() {
+        return super.light.getMessage();
     }
 
     @Override

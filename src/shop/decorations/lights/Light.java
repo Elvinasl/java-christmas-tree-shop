@@ -20,4 +20,8 @@ public abstract class Light {
         }
 
     }
+
+    public String getMessage() {
+        return this.message;
+    }
 }

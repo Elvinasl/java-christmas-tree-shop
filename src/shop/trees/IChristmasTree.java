@@ -4,5 +4,5 @@ import shop.decorations.lights.Light;
 
 public interface IChristmasTree {
     int getHeight();
-    Light getLight();
+    String getLightMessage();
 }

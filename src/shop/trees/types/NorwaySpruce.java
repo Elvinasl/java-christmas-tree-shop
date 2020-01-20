@@ -16,8 +16,8 @@ public class NorwaySpruce extends ChristmasTree implements IChristmasTree, Produ
     }
 
     @Override
-    public Light getLight() {
-        return super.light;
+    public String getLightMessage() {
+        return super.light.getMessage();
     }
 
     @Override
