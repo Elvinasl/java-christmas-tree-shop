@@ -14,6 +14,10 @@ public class Intratuin {
         this.trees = trees;
     }
 
+    public Intratuin(List<ChristmasTree> trees) {
+        this.trees = trees;
+    }
+
     public void printAllProducts() {
         getProducts().forEach(product -> {
             System.out.println("Product: " + product.getLabel());
@@ -21,7 +25,7 @@ public class Intratuin {
         });
     }
 
-    private void turnAllTrees() {
+    public void turnAllTrees() {
         getTrees().forEach(tree -> System.out.println(tree.getLightMessage()));
     }
 

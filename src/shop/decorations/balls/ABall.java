@@ -5,7 +5,7 @@ import shop.exceptions.ChristmasBallTooBigException;
 public abstract class ABall {
     protected int diameter;
     protected Color color;
-    protected enum Color {
+    public enum Color {
         BLUE,
         RED,
         GOLD,
