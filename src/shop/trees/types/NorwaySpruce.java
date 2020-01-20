@@ -2,10 +2,10 @@ package shop.trees.types;
 
 import shop.Product;
 import shop.decorations.lights.Light;
+import shop.trees.AnChristmasTree;
 import shop.trees.ChristmasTree;
-import shop.trees.IChristmasTree;
 
-public class NorwaySpruce extends ChristmasTree implements IChristmasTree, Product {
+public class NorwaySpruce extends AnChristmasTree implements ChristmasTree, Product {
 
     public NorwaySpruce(int height) {
         super(height);

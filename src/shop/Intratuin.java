@@ -1,15 +1,15 @@
 package shop;
 
-import shop.trees.IChristmasTree;
+import shop.trees.ChristmasTree;
 
 import java.util.List;
 
 public class Intratuin {
 
     private List<Product> products;
-    private List<IChristmasTree> trees;
+    private List<ChristmasTree> trees;
 
-    public Intratuin(List<Product> products, List<IChristmasTree> trees) {
+    public Intratuin(List<Product> products, List<ChristmasTree> trees) {
         this.products = products;
         this.trees = trees;
     }
@@ -22,16 +22,14 @@ public class Intratuin {
     }
 
     private void turnAllTrees() {
-        getTrees().forEach(tree -> {
-            System.out.println(tree.getLightMessage());
-        });
+        getTrees().forEach(tree -> System.out.println(tree.getLightMessage()));
     }
 
     public List<Product> getProducts() {
         return products;
     }
 
-    public List<IChristmasTree> getTrees() {
+    public List<ChristmasTree> getTrees() {
         return trees;
     }
 }

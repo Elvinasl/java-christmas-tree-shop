@@ -2,10 +2,10 @@ package shop.trees.types;
 
 import shop.Product;
 import shop.decorations.lights.Light;
+import shop.trees.AnChristmasTree;
 import shop.trees.ChristmasTree;
-import shop.trees.IChristmasTree;
 
-public class Plastic extends ChristmasTree implements IChristmasTree, Product {
+public class Plastic extends AnChristmasTree implements ChristmasTree, Product {
 
     public Plastic(int height) {
         super(height);
