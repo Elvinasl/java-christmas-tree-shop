@@ -1,10 +1,11 @@
 package shop.decorations.balls;
 
 import shop.Product;
+import shop.exceptions.ChristmasBallTooBigException;
 
 public class ChristmasBall extends ABall implements Ball, Product {
 
-    public ChristmasBall(int diameter, Color color) {
+    public ChristmasBall(int diameter, Color color) throws ChristmasBallTooBigException {
         super(diameter, color);
     }
 
