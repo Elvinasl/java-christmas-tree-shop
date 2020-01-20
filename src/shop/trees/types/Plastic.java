@@ -8,18 +8,20 @@ import shop.trees.ChristmasTree;
 
 import java.util.List;
 
+import static shop.trees.types.Prices.PLASTIC_PRICE;
+
 public class Plastic extends AnChristmasTree implements ChristmasTree, Product {
 
     public Plastic(int height) {
-        super(height);
+        super(height, PLASTIC_PRICE);
     }
 
     public Plastic(int height, Light light) {
-        super(height, light);
+        super(height, light, PLASTIC_PRICE);
     }
 
     public Plastic(int height, Light light, List<Ball> balls) {
-        super(height, light, balls);
+        super(height, light, balls, PLASTIC_PRICE);
     }
 
     @Override
@@ -34,7 +36,7 @@ public class Plastic extends AnChristmasTree implements ChristmasTree, Product {
 
     @Override
     public double getPrice() {
-        return 10;
+        return super.getPrice();
     }
 
     @Override

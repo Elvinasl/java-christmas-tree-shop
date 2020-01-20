@@ -8,18 +8,20 @@ import shop.trees.ChristmasTree;
 
 import java.util.List;
 
+import static shop.trees.types.Prices.NORWAY_SPRUCE_PRICE;
+
 public class NorwaySpruce extends AnChristmasTree implements ChristmasTree, Product {
 
     public NorwaySpruce(int height) {
-        super(height);
+        super(height, NORWAY_SPRUCE_PRICE);
     }
 
     public NorwaySpruce(int height, Light light) {
-        super(height, light);
+        super(height, light, NORWAY_SPRUCE_PRICE);
     }
 
     public NorwaySpruce(int height, Light light, List<Ball> balls) {
-        super(height, light, balls);
+        super(height, light, balls, NORWAY_SPRUCE_PRICE);
     }
 
     @Override
@@ -34,7 +36,7 @@ public class NorwaySpruce extends AnChristmasTree implements ChristmasTree, Prod
 
     @Override
     public double getPrice() {
-        return 20;
+        return super.getPrice();
     }
 
     @Override

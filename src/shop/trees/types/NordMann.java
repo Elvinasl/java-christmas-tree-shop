@@ -11,15 +11,15 @@ import java.util.List;
 public class NordMann extends AnChristmasTree implements ChristmasTree, Product {
 
     public NordMann(int height) {
-        super(height);
+        super(height, Prices.NORDMANN_PRICE);
     }
 
     public NordMann(int height, Light light) {
-        super(height, light);
+        super(height, light, Prices.NORDMANN_PRICE);
     }
 
     public NordMann(int height, Light light, List<Ball> balls) {
-        super(height, light, balls);
+        super(height, light, balls, Prices.NORDMANN_PRICE);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class NordMann extends AnChristmasTree implements ChristmasTree, Product 
 
     @Override
     public double getPrice() {
-        return 30;
+        return super.getPrice();
     }
 
     @Override
