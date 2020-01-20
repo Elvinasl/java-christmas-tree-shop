@@ -8,7 +8,7 @@ import shop.exceptions.NoLengthAvailable;
 public class White extends Light implements LightBehavior, Product {
 
     public White(int length) throws NoLengthAvailable {
-        super(length, "I'm just shining boring white!");
+        super(length, "I'm just shining boring white!", 5.0, 0.03);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class White extends Light implements LightBehavior, Product {
 
     @Override
     public double getPrice() {
-        return 5 + super.length * 0.03;
+        return super.getPrice();
     }
 
     @Override

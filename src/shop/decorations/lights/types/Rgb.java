@@ -8,7 +8,7 @@ import shop.exceptions.NoLengthAvailable;
 public class Rgb extends Light implements LightBehavior, Product {
 
     public Rgb(int length) throws NoLengthAvailable {
-        super(length, "I am giving a little bit more color to your life!");
+        super(length, "I am giving a little bit more color to your life!", 8.0, 0.05);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Rgb extends Light implements LightBehavior, Product {
 
     @Override
     public double getPrice() {
-        return 8 + super.length * 0.05;
+        return super.price;
     }
 
     @Override

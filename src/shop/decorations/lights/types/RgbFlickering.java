@@ -8,7 +8,7 @@ import shop.exceptions.NoLengthAvailable;
 public class RgbFlickering extends Light implements LightBehavior, Product {
 
     public RgbFlickering(int length) throws NoLengthAvailable {
-        super(length, "I am ready to have a little party!");
+        super(length, "I am ready to have a little party!", 9.50, 0.08);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class RgbFlickering extends Light implements LightBehavior, Product {
 
     @Override
     public double getPrice() {
-        return 9.50 + super.length * 0.08;
+        return  super.getPrice();
     }
 
     @Override

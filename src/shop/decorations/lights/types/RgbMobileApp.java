@@ -8,7 +8,7 @@ import shop.exceptions.NoLengthAvailable;
 public class RgbMobileApp extends Light implements LightBehavior, Product {
 
     public RgbMobileApp(int length) throws NoLengthAvailable {
-        super(length, "I'm completely future proof!");
+        super(length, "I'm completely future proof!", 95.0, 0.6);
     }
 
     @Override
@@ -18,7 +18,7 @@ public class RgbMobileApp extends Light implements LightBehavior, Product {
 
     @Override
     public double getPrice() {
-        return 95 + 0.60 * super.length;
+        return super.getPrice();
     }
 
     @Override
