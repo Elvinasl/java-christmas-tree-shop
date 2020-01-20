@@ -1,6 +1,7 @@
 package shop.trees.types;
 
 import shop.Product;
+import shop.decorations.lights.Light;
 import shop.trees.ChristmasTree;
 import shop.trees.IChristmasTree;
 
@@ -10,9 +11,18 @@ public class NordMann extends ChristmasTree implements IChristmasTree, Product {
         super(height);
     }
 
+    public NordMann(int height, Light light) {
+        super(height, light);
+    }
+
     @Override
     public String getLabel() {
         return "Nordmann";
+    }
+
+    @Override
+    public Light getLight() {
+        return super.light;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package shop.trees.types;
 
 import shop.Product;
+import shop.decorations.lights.Light;
 import shop.trees.ChristmasTree;
 import shop.trees.IChristmasTree;
 
@@ -8,6 +9,15 @@ public class NorwaySpruce extends ChristmasTree implements IChristmasTree, Produ
 
     public NorwaySpruce(int height) {
         super(height);
+    }
+
+    public NorwaySpruce(int height, Light light) {
+        super(height, light);
+    }
+
+    @Override
+    public Light getLight() {
+        return super.light;
     }
 
     @Override
