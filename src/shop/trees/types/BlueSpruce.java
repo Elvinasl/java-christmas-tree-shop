@@ -14,6 +14,10 @@ public class BlueSpruce extends AnChristmasTree implements ChristmasTree, Produc
         super(height, Prices.BLUE_SPRUCE_PRICE);
     }
 
+    public BlueSpruce(int height, List<Ball> balls) {
+        super(height, balls, Prices.BLUE_SPRUCE_PRICE);
+    }
+
     public BlueSpruce(int height, Light light) {
         super(height, light, Prices.BLUE_SPRUCE_PRICE);
     }

@@ -20,6 +20,10 @@ public class NorwaySpruce extends AnChristmasTree implements ChristmasTree, Prod
         super(height, light, NORWAY_SPRUCE_PRICE);
     }
 
+    public NorwaySpruce(int height, List<Ball> balls) {
+        super(height, balls, NORWAY_SPRUCE_PRICE);
+    }
+
     public NorwaySpruce(int height, Light light, List<Ball> balls) {
         super(height, light, balls, NORWAY_SPRUCE_PRICE);
     }

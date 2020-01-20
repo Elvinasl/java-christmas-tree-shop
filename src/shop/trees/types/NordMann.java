@@ -18,6 +18,10 @@ public class NordMann extends AnChristmasTree implements ChristmasTree, Product 
         super(height, light, Prices.NORDMANN_PRICE);
     }
 
+    public NordMann(int height, List<Ball> balls) {
+        super(height, balls, Prices.NORDMANN_PRICE);
+    }
+
     public NordMann(int height, Light light, List<Ball> balls) {
         super(height, light, balls, Prices.NORDMANN_PRICE);
     }

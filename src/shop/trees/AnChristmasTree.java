@@ -29,6 +29,12 @@ public abstract class AnChristmasTree {
         this.price = price;
     }
 
+    public AnChristmasTree(int height, List<Ball> balls, double price) {
+        this.height = height;
+        this.balls = balls;
+        this.price = price;
+    }
+
     public Light getLight() {
         return light;
     }
@@ -41,7 +47,7 @@ public abstract class AnChristmasTree {
         }
 
         // lets add balls price (if we have balls)
-        if (balls.size() > 0) {
+        if (balls != null && balls.size() > 0) {
             finalPrice += balls.stream().mapToDouble(Ball::getPrice).sum();
         }
         return finalPrice;
