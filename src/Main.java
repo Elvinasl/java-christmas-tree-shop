@@ -21,9 +21,10 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws NoLengthAvailable {
-        Intratuin intratuin = new Intratuin(getTrees());
+    public static void main(String[] args) throws NoLengthAvailable, ChristmasBallTooBigException {
+        Intratuin intratuin = new Intratuin(getProducts(), getTrees());
         intratuin.turnAllTrees();
+        intratuin.printAllProducts();
     }
 
     private static List<Light> getLights() throws NoLengthAvailable {
@@ -60,7 +61,21 @@ public class Main {
         return trees;
     }
 
-//    private List<Product> getProducts() {
-//
-//    }
+    private static List<Product> getProducts() throws ChristmasBallTooBigException, NoLengthAvailable {
+        List<Product> products = new ArrayList<>();
+        // ball
+        products.add(new ChristmasBall(20, ABall.Color.RED));
+        //lights
+        products.add(new Rgb(10));
+        products.add(new RgbFlickering(5));
+        products.add(new RgbMobileApp(10));
+        products.add(new White(30));
+        // trees
+        products.add(new BlueSpruce(10, new Rgb(10)));
+        products.add(new NordMann(20, new RgbFlickering(5)));
+        products.add(new NorwaySpruce(10, new White(30)));
+        products.add(new Plastic(30, new RgbMobileApp(5)));
+
+        return products;
+    }
 }
