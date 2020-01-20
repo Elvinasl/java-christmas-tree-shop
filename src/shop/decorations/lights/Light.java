@@ -1,9 +1,12 @@
 package shop.decorations.lights;
 
+import shop.exceptions.Messages;
 import shop.exceptions.NoLengthAvailable;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static shop.exceptions.Messages.LIGHT_LENGTH_MESSAGE;
 
 public abstract class Light {
 
@@ -20,7 +23,7 @@ public abstract class Light {
             this.price = price;
             this.pricePerLength = pricePerLength;
         } else {
-            throw new NoLengthAvailable("Given length is not available in this shop!");
+            throw new NoLengthAvailable(LIGHT_LENGTH_MESSAGE);
         }
 
     }

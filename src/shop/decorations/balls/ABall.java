@@ -2,6 +2,8 @@ package shop.decorations.balls;
 
 import shop.exceptions.ChristmasBallTooBigException;
 
+import static shop.exceptions.Messages.BALL_SIZE_MESSAGE;
+
 public abstract class ABall {
     protected int diameter;
     protected Color color;
@@ -14,7 +16,7 @@ public abstract class ABall {
 
     public ABall(int diameter, Color color) throws ChristmasBallTooBigException {
         if (diameter > 30) {
-            throw new ChristmasBallTooBigException("Ball is too big!");
+            throw new ChristmasBallTooBigException(BALL_SIZE_MESSAGE);
         } else {
             this.diameter = diameter;
             this.color = color;
