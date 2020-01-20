@@ -1,7 +1,7 @@
 package shop.trees;
 
 public abstract class ChristmasTree {
-    public int height;
+    protected int height;
 
     public ChristmasTree(int height) {
         this.height = height;
